@@ -1,0 +1,37 @@
+{
+  "name": "meta-webview-scene-interface",
+  "version": "1.0.0",
+  "description": "Interface between your website and the Metaverse browser",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "babel lib -d distribution",
+    "test": "NODE_TESTING=true mocha --compilers js:babel-core/register --timeout 5000",
+    "lint": "./node_modules/.bin/eslint lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoMeta/meta-webview-scene-interface.git"
+  },
+  "author": "Sean Thielen <sean@gometa.io> (http://gometa.io)",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/GoMeta/meta-webview-scene-interface/issues"
+  },
+  "homepage": "https://github.com/GoMeta/meta-webview-scene-interface#readme",
+  "dependencies": {
+    "@babel/standalone": "^7.0.0-beta.40",
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.10.4",
+    "babel-plugin-transform-object-entries": "^1.0.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0"
+  }
+}
